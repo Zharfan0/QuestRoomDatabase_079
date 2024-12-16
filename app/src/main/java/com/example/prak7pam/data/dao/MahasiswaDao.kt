@@ -27,4 +27,8 @@ interface MahasiswaDao {
     @Update
     suspend fun updateMahasiswa(mahasiswa: Mahasiswa) // Memperbarui data di tabel
 
+    @Insert
+    suspend fun insertMahasiswa(
+        mahasiswa: Mahasiswa
+    )
 }
