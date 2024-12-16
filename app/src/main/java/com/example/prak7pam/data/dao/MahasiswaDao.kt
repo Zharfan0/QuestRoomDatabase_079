@@ -23,4 +23,8 @@ interface MahasiswaDao {
     @Delete
     suspend fun deleteMahasiswa(mahasiswa: Mahasiswa) // Suspend digunakan dengan coroutine
 
+    // Update Mahasiswa
+    @Update
+    suspend fun updateMahasiswa(mahasiswa: Mahasiswa) // Memperbarui data di tabel
+
 }
