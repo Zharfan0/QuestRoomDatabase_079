@@ -14,4 +14,8 @@ interface MahasiswaDao {
     //fungsi get all data
     @Query("select * from mahasiswa")
     fun getAllMahasiswa() : Flow<List<Mahasiswa>>
+
+    // get Mahasiswa
+    @Query("SELECT * FROM mahasiswa WHERE nim = :nim")
+    fun getMahasiswa(nim: String): Flow<Mahasiswa> // Data diambil berdasarkan NIM
 }
